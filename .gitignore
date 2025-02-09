@@ -2,6 +2,6 @@
 .DS_Store
 .idea
 __pycache__
-./data/www/*
-./data/redis/*
-./data/www/*
+data/www
+data/redis
+data/mysql
