@@ -37,13 +37,13 @@ services:
       options:
         max-file: "3"
         max-size: 100m
-    depends_on:
-      php:
-        condition: service_healthy
-        restart: true
-      phpmyadmin:
-        condition: service_healthy
-        restart: true
+    # depends_on:
+    #   php:
+    #     condition: service_healthy
+    #     restart: true
+    #   phpmyadmin:
+    #     condition: service_healthy
+    #     restart: true
 
   php:
     image: buxiaomo/php:7.3.33-fpm
