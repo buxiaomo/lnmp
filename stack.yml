@@ -15,7 +15,7 @@ services:
       - ./data/www:/var/www/html:rw
     deploy:
       mode: replicated
-      replicas: 1
+      replicas: 2
       # resources:
       #   limits:
       #     cpus: "4"
@@ -60,14 +60,14 @@ services:
       - ./data/www:/var/www/html:rw
     deploy:
       mode: replicated
-      replicas: 1
-      resources:
-        limits:
-          cpus: "1"
-          memory: 1G
-        reservations:
-          cpus: "0.5"
-          memory: 100M
+      replicas: 2
+      # resources:
+      #   limits:
+      #     cpus: "1"
+      #     memory: 1G
+      #   reservations:
+      #     cpus: "0.5"
+      #     memory: 100M
       update_config:
         order: start-first
         parallelism: 1
