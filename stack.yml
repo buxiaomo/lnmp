@@ -174,7 +174,7 @@ services:
 
 configs:
   nginx:
-    file: ./conf/nginx.conf
+    file: ./conf/conf.d/edusuho.conf
   php:
     file: ./conf/php.ini
   php-fpm:

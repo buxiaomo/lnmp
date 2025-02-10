@@ -11,7 +11,7 @@ deploy:
 	@docker stack deploy -c stack.yml lnmp --with-registry-auth --prune --detach=false
 
 fix:
-	# 101 nginx 33 php-fpm
+	# 101 nginx 33 php
 	@chown -R 33.101 ./data/www
 	@find ./data/www -type d -exec chmod 755 {} \;
 	@find ./data/www -type f -exec chmod 644 {} \;
