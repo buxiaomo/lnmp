@@ -8,9 +8,10 @@ runtime:
 	@systemctl restart docker.service
 
 deploy:
-	@docker stack deploy -c stack.yml lnmp --with-registry-auth --prune
-	@chown -R 82.101 ./data/www
+	@docker stack deploy -c stack.yml lnmp --with-registry-auth --prune --detach=false
 
 fix:
+	# 101 nginx 33 php-fpm
+	@chown -R 33.101 ./data/www
 	@find ./data/www -type d -exec chmod 755 {} \;
 	@find ./data/www -type f -exec chmod 644 {} \;
